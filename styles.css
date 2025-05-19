@@ -1,0 +1,131 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+  }
+  
+  .clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 10px solid black;
+    border-radius: 50%;
+    margin: 50px;
+  }
+  
+  .hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: center bottom;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  
+  .hour {
+    width: 6px;
+    height: 70px;
+    transform-origin: center bottom;
+    background: black;
+  }
+  
+  .minute {
+    width: 4px;
+    height: 100px;
+    transform-origin: center bottom;
+    background: gray;
+  }
+  
+  .center-dot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: black;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: -100px;
+  }
+
+  .buttons button {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    min-width: 80px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .hand::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 10px solid black;
+  }
+
+  .tick {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 10px;
+    background: black;
+  
+
+    margin-left: -1px;
+    margin-top:  -10px;
+  
+    transform-origin: 1px 10px;
+  }
+  
+  .tick.hour {
+    /* 시각 눈금은 더 길게 */
+    height: 30px;
+    margin-top: -20px;       /* 높이 전부만큼 위로 */
+    transform-origin: 1px 20px;  /* px 단위도 그대로 맞춰줌 */
+  }
+  
+  /* 시계 전체 영역을 가로로 배치 */
+.clock-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;  /* 버튼과 거리 띄우기 */
+  }
+  
+  /* 디지털 시계 스타일 */
+  #digital-clock {
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+    font-size: 3rem;
+    background: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    width: 6ch;        /* “ch” 단위는 글자 ‘0’의 폭 기준이므로 hh:mm에 딱 맞습니다. */
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .clock-title {
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+    font-size: 3rem;      /* 원하는 크기로 조정 */
+    font-weight: bold;
+    margin-bottom: 20px;    /* 제목과 시계 사이 간격 */
+    color: #333;            /* 원하는 색상으로 */
+    text-align: center;     /* 가운데 정렬 */
+    width: 100%;            /* 컨테이너 전체 너비 차지 */
+  }
+  
+  
+  

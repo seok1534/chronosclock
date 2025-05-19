@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>아날로그 시계</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2 class="clock-title">CHRONOS</h2>
+    <div class="clock-container">
+  <div class="clock">
+    <div class="hand hour" id="hour-hand"></div>
+    <div class="hand minute" id="minute-hand"></div>
+    <div class="center-dot"></div>
+  </div>
+  <div id="digital-clock">--:--:--</div>
+</div>
+
+  <div class="buttons">
+    <button onclick="adjustTime(60)">+1시간</button>
+    <button onclick="adjustTime(-60)">-1시간</button>
+    <button onclick="adjustTime(15)">+15분</button>
+    <button onclick="adjustTime(-15)">-15분</button>
+    <button onclick="setToCurrentTime()">현재 시간</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
